@@ -1,0 +1,2921 @@
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 5:                WHERE a.attrelid = '"posts"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 5:                WHERE a.attrelid = '"posts"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 5:                WHERE a.attrelid = '"posts"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 5:                WHERE a.attrelid = '"posts"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"posts"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20131118124320)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "body" text) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131118124320"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuf"]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuf"]]
+Started GET "/index.html" for 127.0.0.1 at 2013-11-18 14:21:22 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuf"]]
+Started GET "/index.html" for 127.0.0.1 at 2013-11-18 14:24:01 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuf"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 14:25:28 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuf"]]
+Started GET "/index" for 127.0.0.1 at 2013-11-18 15:34:10 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/index" for 127.0.0.1 at 2013-11-18 15:39:04 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 15:40:34 +0000
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 51ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 15:46:14 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 624ms (Views: 608.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 15:47:35 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 66ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:06:15 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 75ms (Views: 54.3ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:06:15 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:08:00 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 78ms (Views: 51.7ms | ActiveRecord: 1.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:08:01 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:24:42 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (47.5ms)
+Completed 500 Internal Server Error in 69ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:24:42 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 8ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:28:30 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 75ms (Views: 57.0ms | ActiveRecord: 1.5ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 16:28:30 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:28:30 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:28:55 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 68ms (Views: 47.6ms | ActiveRecord: 1.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 16:28:55 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:28:55 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:31:31 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 68ms (Views: 49.2ms | ActiveRecord: 1.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 16:31:31 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:31:31 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:43:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 48.0ms | ActiveRecord: 1.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 16:43:22 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 3.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:43:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:44:51 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 67ms (Views: 48.0ms | ActiveRecord: 1.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 16:44:51 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 4.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:44:51 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:45:48 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 65ms (Views: 47.4ms | ActiveRecord: 1.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 16:45:48 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 3.8ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-18 16:45:48 +0000
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:45:48 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:50:21 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 67ms (Views: 49.3ms | ActiveRecord: 1.6ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 16:50:22 +0000
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:50:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:51:20 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 70ms (Views: 52.0ms | ActiveRecord: 1.4ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 16:51:20 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 3.9ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-18 16:51:20 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:51:20 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 16:51:20 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20131118183341)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (7.3ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "body" text, "post_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE INDEX "index_comments_on_post_id" ON "comments" ("post_id")
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131118183341"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:49:54 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 218ms (Views: 197.4ms | ActiveRecord: 1.3ms)
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:49:54 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 18:49:54 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-18 18:49:54 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:49:54 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:49:54 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:53:20 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 17.6ms | ActiveRecord: 1.3ms)
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:53:20 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 18:53:20 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-18 18:53:20 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:53:20 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:53:20 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:53:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 17.2ms | ActiveRecord: 1.2ms)
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:53:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 18:53:56 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-18 18:53:56 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:53:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:53:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:55:18 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 17.9ms | ActiveRecord: 1.2ms)
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:55:18 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 18:55:18 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-18 18:55:18 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:55:18 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:55:18 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:56:13 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 72ms (Views: 55.8ms | ActiveRecord: 0.4ms)
+Started GET "/comments/new" for 127.0.0.1 at 2013-11-18 18:56:13 +0000
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:56:13 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-18 18:56:13 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-18 18:56:13 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:56:13 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-18 18:56:13 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 08:57:49 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 86ms (Views: 69.5ms | ActiveRecord: 0.4ms)
+Started GET "/comments/new" for 127.0.0.1 at 2013-11-19 08:57:49 +0000
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 08:57:49 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 08:57:49 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 08:57:49 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 08:57:49 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 08:57:49 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 08:58:23 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 71ms (Views: 55.4ms | ActiveRecord: 0.4ms)
+Started GET "/comments/new" for 127.0.0.1 at 2013-11-19 08:58:23 +0000
+Processing by CommentsController#new as HTML
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 08:58:23 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 08:58:23 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 08:58:23 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 08:58:23 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 08:58:23 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:04:15 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 70ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+Started GET "/comments/new" for 127.0.0.1 at 2013-11-19 09:04:15 +0000
+Processing by CommentsController#new as HTML
+  Rendered comments/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:04:15 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 09:04:15 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:04:15 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:05:29 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 68ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+Started GET "/comments/new" for 127.0.0.1 at 2013-11-19 09:05:29 +0000
+Processing by CommentsController#new as HTML
+  Rendered comments/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 1.4ms)
+Started POST "/comments" for 127.0.0.1 at 2013-11-19 09:05:29 +0000
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:05:29 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 09:05:29 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 09:05:29 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:05:29 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:05:29 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:05:59 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 65ms (Views: 49.7ms | ActiveRecord: 0.6ms)
+Started GET "/comments/new" for 127.0.0.1 at 2013-11-19 09:05:59 +0000
+Processing by CommentsController#new as HTML
+  Rendered comments/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 1.3ms)
+Started POST "/comments" for 127.0.0.1 at 2013-11-19 09:05:59 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment"}
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:05:59 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 09:05:59 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 09:05:59 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:05:59 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:05:59 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:07:55 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 69ms (Views: 54.0ms | ActiveRecord: 0.4ms)
+Started GET "/comments/new" for 127.0.0.1 at 2013-11-19 09:07:55 +0000
+Processing by CommentsController#new as HTML
+  Rendered comments/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 1.6ms)
+Started POST "/comments" for 127.0.0.1 at 2013-11-19 09:07:55 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment"}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:07:55 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 09:07:55 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 09:07:55 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:07:55 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:07:55 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 68ms (Views: 52.3ms | ActiveRecord: 0.4ms)
+Started GET "/comments/new" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by CommentsController#new as HTML
+  Rendered comments/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 1.4ms)
+Started POST "/comments" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment"}
+  [1m[35mSQL (31.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 09:08:23 UTC +00:00], ["updated_at", Tue, 19 Nov 2013 09:08:23 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 34ms (ActiveRecord: 31.2ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 09:08:23 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:07:24 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 29ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:07:24 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 11:07:24 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 11:07:24 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:07:24 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:07:24 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:08:27 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 27ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:08:27 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 11:08:27 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 11:08:27 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:08:27 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:08:27 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 63]]
+  Rendered posts/index.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 94ms (Views: 75.5ms | ActiveRecord: 3.7ms)
+Started GET "/posts/63/comments/new" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"63"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "63"]]
+  Rendered comments/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 1.4ms)
+Started POST "/posts/63/comments" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"63"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "63"]]
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 11:09:14 UTC +00:00], ["post_id", 63], ["updated_at", Tue, 19 Nov 2013 11:09:14 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 63]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 64]]
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:09:14 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 65]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:15:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 66]]
+  Rendered posts/index.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 86ms (Views: 67.5ms | ActiveRecord: 3.6ms)
+Started GET "/posts/66/comments/new" for 127.0.0.1 at 2013-11-19 11:15:57 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"66"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "66"]]
+  Rendered comments/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 1.6ms)
+Started POST "/posts/66/comments" for 127.0.0.1 at 2013-11-19 11:15:57 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"66"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "66"]]
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 11:15:57 UTC +00:00], ["post_id", 66], ["updated_at", Tue, 19 Nov 2013 11:15:57 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:15:57 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 66]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:15:57 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 11:15:57 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 11:15:57 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:15:57 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 67]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:15:57 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 68]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 69]]
+  Rendered posts/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 96ms (Views: 77.0ms | ActiveRecord: 4.3ms)
+Started GET "/posts/69/comments/new" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"69"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "69"]]
+  Rendered comments/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 1.5ms)
+Started POST "/posts/69/comments" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"69"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "69"]]
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 11:56:16 UTC +00:00], ["post_id", 69], ["updated_at", Tue, 19 Nov 2013 11:56:16 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 69]]
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 70]]
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 71]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:56:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 72]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:58:36 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 73]]
+  Rendered posts/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 87ms (Views: 68.5ms | ActiveRecord: 4.3ms)
+Started GET "/posts/73/comments/new" for 127.0.0.1 at 2013-11-19 11:58:36 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"73"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "73"]]
+  Rendered comments/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 1.6ms)
+Started POST "/posts/73/comments" for 127.0.0.1 at 2013-11-19 11:58:36 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"73"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "73"]]
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 11:58:36 UTC +00:00], ["post_id", 73], ["updated_at", Tue, 19 Nov 2013 11:58:36 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:58:36 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 73]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:58:37 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 11:58:37 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 11:58:37 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:58:37 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 74]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:58:37 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 75]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:58:37 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 76]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 77]]
+  Rendered posts/index.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 88ms (Views: 69.6ms | ActiveRecord: 4.0ms)
+Started GET "/posts/77/comments/new" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"77"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "77"]]
+  Rendered comments/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 1.6ms)
+Started POST "/posts/77/comments" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"77"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "77"]]
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 11:59:11 UTC +00:00], ["post_id", 77], ["updated_at", Tue, 19 Nov 2013 11:59:11 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 77]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 78]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 79]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+Started GET "/posts/79/edit" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 11:59:11 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 80]]
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 81]]
+  Rendered posts/index.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 91ms (Views: 72.7ms | ActiveRecord: 3.8ms)
+Started GET "/posts/81/comments/new" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"81"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "81"]]
+  Rendered comments/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.7ms)
+Started POST "/posts/81/comments" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"81"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "81"]]
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:00:03 UTC +00:00], ["post_id", 81], ["updated_at", Tue, 19 Nov 2013 12:00:03 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 81]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 82]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 83]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+Started GET "/posts/83/edit" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"83"}
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:00:03 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 84]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 85]]
+  Rendered posts/index.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 94ms (Views: 74.1ms | ActiveRecord: 4.5ms)
+Started GET "/posts/85/comments/new" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"85"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "85"]]
+  Rendered comments/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 1.4ms)
+Started POST "/posts/85/comments" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"85"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "85"]]
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:03:22 UTC +00:00], ["post_id", 85], ["updated_at", Tue, 19 Nov 2013 12:03:22 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 85]]
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 86]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 87]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+Started GET "/posts/87/edit" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"87"}
+Completed 404 Not Found in 0ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:03:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 88]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 89]]
+  Rendered posts/index.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 93ms (Views: 73.9ms | ActiveRecord: 3.5ms)
+Started GET "/posts/89/comments/new" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"89"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "89"]]
+  Rendered comments/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 1.7ms)
+Started POST "/posts/89/comments" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"89"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "89"]]
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:05:19 UTC +00:00], ["post_id", 89], ["updated_at", Tue, 19 Nov 2013 12:05:19 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 89]]
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 90]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 91]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+Started GET "/posts/91/edit" for 127.0.0.1 at 2013-11-19 12:05:19 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"91"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "91"]]
+  Rendered posts/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:05:20 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 92]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 93]]
+  Rendered posts/index.html.erb within layouts/application (70.5ms)
+Completed 200 OK in 110ms (Views: 91.4ms | ActiveRecord: 3.8ms)
+Started GET "/posts/93/comments/new" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"93"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "93"]]
+  Rendered comments/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 1.4ms)
+Started POST "/posts/93/comments" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"93"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "93"]]
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:31:34 UTC +00:00], ["post_id", 93], ["updated_at", Tue, 19 Nov 2013 12:31:34 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 93]]
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 94]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 95]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+Started GET "/posts/95/edit" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "95"]]
+  Rendered posts/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 96]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+Started GET "/posts/96/edit" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "96"]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:31:34 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 97]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 98]]
+  Rendered posts/index.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 99ms (Views: 70.4ms | ActiveRecord: 3.7ms)
+Started GET "/posts/98/comments/new" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"98"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "98"]]
+  Rendered comments/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 1.5ms)
+Started POST "/posts/98/comments" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"98"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "98"]]
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:32:56 UTC +00:00], ["post_id", 98], ["updated_at", Tue, 19 Nov 2013 12:32:56 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 98]]
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 99]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 100]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+Started GET "/posts/100/edit" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "100"]]
+  Rendered posts/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 101]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/posts/101/edit" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "101"]]
+  Rendered posts/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started PATCH "/posts/101" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:32:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 102]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 103]]
+  Rendered posts/index.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 89ms (Views: 69.3ms | ActiveRecord: 4.4ms)
+Started GET "/posts/103/comments/new" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"103"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "103"]]
+  Rendered comments/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 1.6ms)
+Started POST "/posts/103/comments" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"103"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "103"]]
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:38:00 UTC +00:00], ["post_id", 103], ["updated_at", Tue, 19 Nov 2013 12:38:00 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 103]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 104]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 105]]
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+Started GET "/posts/105/edit" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "105"]]
+  Rendered posts/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 106]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+Started GET "/posts/106/edit" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"106"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "106"]]
+  Rendered posts/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+Started PATCH "/posts/106" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:00 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 107]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (3.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 108]]
+  Rendered posts/index.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 87ms (Views: 67.7ms | ActiveRecord: 4.3ms)
+Started GET "/posts/108/comments/new" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"108"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "108"]]
+  Rendered comments/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 1.4ms)
+Started POST "/posts/108/comments" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"108"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "108"]]
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:38:56 UTC +00:00], ["post_id", 108], ["updated_at", Tue, 19 Nov 2013 12:38:56 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 108]]
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 109]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 110]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+Started GET "/posts/110/edit" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"110"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "110"]]
+  Rendered posts/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 111]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/posts/111/edit" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"111"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "111"]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started PATCH "/posts/111" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"weather stuff", "body"=>"And also..."}, "commit"=>"Update", "id"=>"111"}
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:38:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 112]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:39:48 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 113]]
+  Rendered posts/index.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 96ms (Views: 75.7ms | ActiveRecord: 3.6ms)
+Started GET "/posts/113/comments/new" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"113"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "113"]]
+  Rendered comments/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 1.7ms)
+Started POST "/posts/113/comments" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"113"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "113"]]
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:39:49 UTC +00:00], ["post_id", 113], ["updated_at", Tue, 19 Nov 2013 12:39:49 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 113]]
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 114]]
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 115]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+Started GET "/posts/115/edit" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"115"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "115"]]
+  Rendered posts/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 116]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/posts/116/edit" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"116"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "116"]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+Started PATCH "/posts/116" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"weather stuff", "body"=>"And also..."}, "commit"=>"Update", "id"=>"116"}
+Redirected to http://www.example.com/posts
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 116]]
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:39:49 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 117]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 118]]
+  Rendered posts/index.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 92ms (Views: 73.4ms | ActiveRecord: 3.8ms)
+Started GET "/posts/118/comments/new" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"118"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "118"]]
+  Rendered comments/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 1.6ms)
+Started POST "/posts/118/comments" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"118"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "118"]]
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:40:46 UTC +00:00], ["post_id", 118], ["updated_at", Tue, 19 Nov 2013 12:40:46 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 118]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 119]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 120]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/posts/120/edit" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "120"]]
+  Rendered posts/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 121]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/posts/121/edit" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"121"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "121"]]
+  Rendered posts/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started PATCH "/posts/121" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"weather stuff", "body"=>"And also..."}, "commit"=>"Update", "id"=>"121"}
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "And also..."], ["title", "weather stuff"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 121]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 122]]
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:40:46 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 123]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:43:03 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:43:03 +0000
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:43:03 +0000
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:43:03 +0000
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:43:03 +0000
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:44:43 +0000
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:44:43 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:44:43 +0000
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:44:43 +0000
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:44:43 +0000
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 132]]
+  Rendered posts/index.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 86ms (Views: 66.9ms | ActiveRecord: 3.8ms)
+Started GET "/posts/132/comments/new" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"132"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "132"]]
+  Rendered comments/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 1.5ms)
+Started POST "/posts/132/comments" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"132"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "132"]]
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:45:51 UTC +00:00], ["post_id", 132], ["updated_at", Tue, 19 Nov 2013 12:45:51 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 132]]
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 133]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 134]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+Started GET "/posts/134/edit" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"134"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "134"]]
+  Rendered posts/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 135]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+Started GET "/posts/135/edit" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"135"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "135"]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started PATCH "/posts/135" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"weather stuff", "body"=>"And also..."}, "commit"=>"Update", "id"=>"135"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "135"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 1ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 135]]
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:45:51 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 136]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 137]]
+  Rendered posts/index.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 91ms (Views: 71.5ms | ActiveRecord: 4.2ms)
+Started GET "/posts/137/comments/new" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"137"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "137"]]
+  Rendered comments/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 1.8ms)
+Started POST "/posts/137/comments" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"137"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "137"]]
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 12:48:33 UTC +00:00], ["post_id", 137], ["updated_at", Tue, 19 Nov 2013 12:48:33 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 137]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 138]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 139]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/posts/139/edit" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"139"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "139"]]
+  Rendered posts/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 140]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/posts/140/edit" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"140"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "140"]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started PATCH "/posts/140" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"weather stuff", "body"=>"And also..."}, "commit"=>"Update", "id"=>"140"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "140"]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "posts" SET "body" = $1 WHERE "posts"."id" = 140[0m  [["body", "And also..."]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 140]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 12:48:33 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 141]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:15 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 142]]
+  Rendered posts/index.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 93ms (Views: 68.4ms | ActiveRecord: 4.7ms)
+Started GET "/posts/142/comments/new" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"142"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "142"]]
+  Rendered comments/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 1.8ms)
+Started POST "/posts/142/comments" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"142"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "142"]]
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 13:50:16 UTC +00:00], ["post_id", 142], ["updated_at", Tue, 19 Nov 2013 13:50:16 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 142]]
+  Rendered posts/index.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 143]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 144]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 145]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/posts/145/edit" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"145"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "145"]]
+  Rendered posts/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 146]]
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+Started GET "/posts/146/edit" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"146"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "146"]]
+  Rendered posts/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started PATCH "/posts/146" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"weather stuff", "body"=>"And also..."}, "commit"=>"Update", "id"=>"146"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "146"]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "body" = $1 WHERE "posts"."id" = 146  [["body", "And also..."]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 146]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 13:50:16 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 147]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 148]]
+  Rendered posts/index.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 90ms (Views: 70.9ms | ActiveRecord: 4.3ms)
+Started GET "/posts/148/comments/new" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"148"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "148"]]
+  Rendered comments/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 44ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 149]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 150]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 151]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+Started GET "/posts/151/edit" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"151"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "151"]]
+  Rendered posts/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 152]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+Started GET "/posts/152/edit" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"152"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "152"]]
+  Rendered posts/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:02:27 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 153]]
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (2.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 154]]
+  Rendered posts/index.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 88ms (Views: 70.0ms | ActiveRecord: 3.5ms)
+Started GET "/posts/154/comments/new" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"154"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "154"]]
+  Rendered comments/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 1.5ms)
+Started POST "/posts/154/comments" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"Cracking post!"}, "commit"=>"Submit Comment", "post_id"=>"154"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "154"]]
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "post_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Cracking post!"], ["created_at", Tue, 19 Nov 2013 14:03:43 UTC +00:00], ["post_id", 154], ["updated_at", Tue, 19 Nov 2013 14:03:43 UTC +00:00]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 154]]
+  Rendered posts/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"Weather", "body"=>"Cloudy, yo!"}, "commit"=>"Post"}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Cloudy, yo!"], ["title", "Weather"]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 155]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 156]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 157]]
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+Started GET "/posts/157/edit" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"157"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "157"]]
+  Rendered posts/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "Zorba"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 158]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+Started GET "/posts/158/edit" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"158"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", "158"]]
+  Rendered posts/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started PATCH "/posts/158" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"weather stuff", "body"=>"And also..."}, "commit"=>"Update", "id"=>"158"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", "158"]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "body" = $1 WHERE "posts"."id" = 158  [["body", "And also..."]]
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 158]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("body", "title") VALUES ($1, $2) RETURNING "id"[0m  [["body", "clouds"], ["title", "weather stuff"]]
+Started GET "/posts" for 127.0.0.1 at 2013-11-19 14:03:43 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 159]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK

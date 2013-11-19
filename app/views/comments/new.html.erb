@@ -1,0 +1,12 @@
+<%= form_for [@post, Comment.new] do |f| %>
+
+<p>
+	<%= f.label :body %>
+	<%= f.text_area :body %>
+</p>
+
+<p>
+<%= f.submit 'Submit Comment' %>
+</p>
+
+<% end %>
