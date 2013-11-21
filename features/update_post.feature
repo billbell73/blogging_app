@@ -10,6 +10,6 @@ Scenario:
 Given there is a post with content "Zorba"
 And I am on the homepage
 And I follow "Edit"
-And I fill in "Message" with "And also..."
+And I fill in "Body" with "And also..."
 When I press "Update"
 Then I should see "And also..."

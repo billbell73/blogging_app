@@ -1,5 +1,8 @@
 BloggingApp::Application.routes.draw do
-  resources :comments
+  devise_for :users
+  resources :votes
+
+  # resources :comments
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -19,7 +22,13 @@ BloggingApp::Application.routes.draw do
 
   resources :posts do
     resources :comments
+    resources :votes
+    member do
+      get :delete
+    end
   end
+
+  #get '/posts/:id/delete2' => 'posts#delete2'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

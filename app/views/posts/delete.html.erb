@@ -1,0 +1,19 @@
+<%= form_for @post, url: post_path(@post), method: :delete do |f| %>
+
+<p>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+</p>
+
+<p>
+	<%= f.label :bodys %>
+	<%= f.text_area :body %>
+</p>
+
+<p>
+<%= f.submit 'Confirm Delete!' %>
+</p>
+
+<% end %>
+
+<%= link_to 'Back', posts_path %>

@@ -5,18 +5,23 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		
+		@post = Post.new
+
 	end
 
 	def create
-		Post.create(params[:post].permit(:title, :body))
+		@post = Post.create(params[:post].permit(:title, :body))
 		flash[:notice] = 'Post saved'
-		redirect_to '/posts'
+		redirect_to @post
+		# redirect_to post_path(@post)
+	end
+
+	def show
+		@post = Post.find(params[:id])
 	end
 
 	def edit
 		@post = Post.find params[:id]
-
 	end
 
 	def update
@@ -24,6 +29,16 @@ class PostsController < ApplicationController
 		puts "params[:id]: #{params[:id]}"
 		@post.update(params[:post].permit(:title, :body))
 		redirect_to '/posts'
+	end
+
+	def destroy
+	  @post = Post.find(params[:id])
+	  @post.destroy
+	  redirect_to posts_path
+	end
+
+	def delete
+		@post = Post.find(params[:id])
 	end
 
 end

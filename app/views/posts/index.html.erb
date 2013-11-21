@@ -1,20 +1,64 @@
-<% @posts.each do |post| %>
+<%= Time.now %>
 
-<h1><%= post.title %></h1>
-
-<%= post.body %>
-<%= link_to 'Edit', edit_post_path(post) %>
-
-<% post.comments.each do |comment | %>
 <br>
-<strong><%= comment.body %></strong>
-<% end %>
+<br>
 
 
-
-<%= link_to 'Add comment', new_post_comment_path(post) %>
-
-<% end %>
 
 <%= link_to 'Create Post', new_post_path %>
+
+<br>
+<h1>List of blog posts</h1>
+ 
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+  <% @posts.each do |post| %>
+    <tr class='post'>
+      <td>
+        <strong>Blog Post:</strong>
+      </td>
+      <td><%= post.title.upcase %></td>
+      <td><%= post.body %></td>
+      <td class="vote-count" data-id="<%= post.id %>">Votes:<%= post.votes_total %></td>
+      <td><%= vote_button post, 'up', '▲' %></td>
+      <td><%= vote_button post, 'down', '▼' %> </td>
+      <td><%= link_to 'Show', post %></td>
+    	<td><%= link_to 'Edit', edit_post_path(post) %></td>
+    	<td><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    	<td><%= link_to 'Refined-delete', delete_post_path(post) %></td>
+      <td><%= link_to 'Add comment', new_post_comment_path(post) %></td>
+    </tr>
+  
+      <% post.comments.each do |comment | %>
+    <tr>
+      <td>Comment:</td>
+      <td></td>
+      <td></td>
+      <td>
+        <strong><%= comment.body %></strong>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+
+
+      <% end %>
+    </tr>
+  
+  <% end %>
+
+</table>
 

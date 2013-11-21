@@ -39,6 +39,9 @@ group :test, :development do
    gem 'capybara'
    gem 'database_cleaner'
    gem 'shoulda-matchers'
+   gem 'poltergeist'
+   # gem 'simplecov', :require => false, :group => :test
+   gem 'devise'
 end
 
 
