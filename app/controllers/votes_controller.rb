@@ -1,6 +1,7 @@
 class VotesController < ApplicationController
 
 	def create
+		#authenticate_user!
 		# raise params.inspect
  		@post = Post.find params[:post_id]
  	  @post.votes.create(direction: params[:direction])

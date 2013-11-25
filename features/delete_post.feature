@@ -10,6 +10,7 @@ When I follow "Destroy"
 Then the post will be deleted
 
 Scenario: Can delete posts
+Given I am a new, authenticated user
 When I follow "Refined-delete"
 And I press "Confirm Delete!"
 Then the post will be deleted

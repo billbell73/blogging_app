@@ -1,7 +1,7 @@
 BloggingApp::Application.routes.draw do
   devise_for :users
-  resources :votes
-
+  
+  # resources :votes
   # resources :comments
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -17,7 +17,7 @@ BloggingApp::Application.routes.draw do
   # get '/posts/new' => 'posts#new', as: 'create_post'
 
   #get '/' => 'home#index'
-  root "home#index"
+  root "posts#index"
   # resources :/
 
   resources :posts do

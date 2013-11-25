@@ -1,5 +1,8 @@
 Feature: Comments
 
+Background: 
+Given I am a new, authenticated user
+
 Scenario: Add comment
 
 Given there is a post with content "clouds"

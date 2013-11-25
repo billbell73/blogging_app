@@ -42,6 +42,7 @@ group :test, :development do
    gem 'poltergeist'
    # gem 'simplecov', :require => false, :group => :test
    gem 'devise'
+   gem 'launchy'
 end
 
 

@@ -38,4 +38,23 @@ Then(/^the post with content "(.*?)" should have (\d+) votes?$/) do |post_conten
   expect(page).to have_css '.vote-count', text: num.to_s
 end
 
+Given(/^I am a new, authenticated user$/) do
+  email = 'testing@man.net'
+  password = 'secretpass'
+  User.new(:email => email, :password => password, :password_confirmation => password).save!
+
+  visit '/users/sign_in'
+  fill_in "user_email", :with => email
+  fill_in "user_password", :with => password
+  click_button "Sign in"
+end
+
+Given(/^I am not authenticated$/) do
+  visit('/users/sign_out')
+end
+
+When(/^show me the page$/) do
+  save_and_open_page
+end
+
 

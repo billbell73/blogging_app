@@ -1,5 +1,8 @@
 Feature: Create post
 
+Background: 
+Given I am a new, authenticated user
+
 Scenario:
 Given I am on the homepage
 And I follow "Create Post"

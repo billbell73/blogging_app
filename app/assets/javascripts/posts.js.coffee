@@ -7,3 +7,12 @@ $ ->
 	$('.button_to').on 'ajax:success', (e, data, status, xhr) ->
 		console.log(e)
 		$(".vote-count[data-id=#{data.id}]").text(data.votes)
+
+#	$('.button_to').on 'click', (e) ->
+#		e.preventDefault()
+
+#		$.post(this.href, ->
+#			this.trigger('ajax:success')
+			
+
+
