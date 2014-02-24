@@ -43,10 +43,11 @@ group :test, :development do
    gem 'shoulda-matchers'
    gem 'poltergeist'
    # gem 'simplecov', :require => false, :group => :test
-   gem 'devise'
+   
    gem 'launchy'
 end
 
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
