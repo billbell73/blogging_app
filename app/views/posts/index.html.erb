@@ -25,15 +25,15 @@
  
   <% @posts.each do |post| %>
     <tr class='post'>
-      <td>
+      <td class="title">
         <strong>Blog Post:</strong>
       </td>
       <td><%= post.title.upcase %></td>
-      <td><%= post.body %></td>
-      <td class="vote-count" data-id="<%= post.id %>">Votes:<%= post.votes_total %></td>
+      <td><%= truncate(post.body, length:250, :separator => ' ') %></td>
+      <td class="vote-count" data-id="<%= post.id %>">Votes: <%= post.votes_total %></td>
       <td><%= vote_button post, 'up', '▲' %></td>
       <td><%= vote_button post, 'down', '▼' %> </td>
-      <td><%= link_to 'Show', post %></td>
+      <td><%= link_to 'Full post', post %></td>
     	<td><%= link_to 'Edit', edit_post_path(post) %></td>
     	<td><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     	<td><%= link_to 'Refined-delete', delete_post_path(post) %></td>
@@ -44,9 +44,9 @@
     <tr>
       <td>Comment:</td>
       <td></td>
-      <td></td>
+      <td><strong><%= comment.body %></strong></td>
       <td>
-        <strong><%= comment.body %></strong>
+        
       </td>
       <td></td>
       <td></td>

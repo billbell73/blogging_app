@@ -6,7 +6,7 @@
 $ ->
 	$('.button_to').on 'ajax:success', (e, data, status, xhr) ->
 		e.preventDefault()
-		$(".vote-count[data-id=#{data.id}]").text(data.votes)
+		$(".vote-count[data-id=#{data.id}]").text("Votes: " + data.votes)
 
 #	$('.button_to').on 'click', (e) ->
 #		e.preventDefault()
