@@ -35,9 +35,9 @@
       <td><%= vote_button post, 'down', '▼' %> </td>
       <td><%= link_to 'Full post', post %></td>
     	<td><%= link_to 'Edit', edit_post_path(post) %></td>
-    	<td><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    	<td><%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     	<td><%= link_to 'Refined-delete', delete_post_path(post) %></td>
-      <td><%= link_to 'Add comment', new_post_comment_path(post) %></td>
+      <td><%= link_to 'Comment', new_post_comment_path(post) %></td>
     </tr>
   
       <% post.comments.each do |comment | %>
